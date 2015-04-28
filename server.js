@@ -2,6 +2,8 @@
 
 var Hapi = require('hapi');
 var server = new Hapi.Server();
+var GoodWinston = require('good-winston');
+var winston = require)'winston');
 
 if ( process.env.PORT ) {
     server.connection({ port: process.env.PORT });
@@ -28,4 +30,23 @@ server.route({
 
 server.start(function () {
     console.log('Server running at:', server.info.uri);
+});
+
+server.register({
+    register: require('good'),
+      options: {
+              reporters: [
+                        new GoodWinston({
+                                    ops: '*',
+                                            request: '*',
+                                            response: '*',
+                                                        log: '*',
+                                                        error: '*'
+                                                                  }, winston)
+                  ]
+                        }
+}, function(err) {
+      if(err) {
+              return server.log(['error'],'good load error: ' + err);
+                }
 });
