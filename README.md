@@ -1,6 +1,27 @@
-# CloudTutorial
+# CloudTutorial [![Build Status](https://secure.travis-ci.org/djr-/CloudTutorial.png?branch=master)](http://travis-ci.org/djr-/CloudTutorial)
 
-Take a look at the [wiki](https://github.com/bowerman0/CloudTutorial/wiki)
+The best project ever.
 
-This tutorial will develop a cloud application in regular one-hour lab sessions.
-Participants can expect to become fully buzzword compliant while exploring modern development technologies.
+## Getting Started
+Install the module with: `npm install CloudTutorial`
+
+```javascript
+var CloudTutorial = require('CloudTutorial');
+CloudTutorial.awesome(); // "awesome"
+```
+
+## Documentation
+_(Coming soon)_
+
+## Examples
+_(Coming soon)_
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_
+
+## License
+Copyright (c) 2015 Ryder, Drew  
+Licensed under the MIT license.
